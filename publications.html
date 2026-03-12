@@ -15,6 +15,48 @@
 <a href="contact.html">Contact</a>
 </nav>
 
+
+
+<div id="arxiv-feed"></div>
+
+<script>
+fetch("https://export.arxiv.org/api/query?search_query=au:Pain_B&start=0&max_results=5")
+.then(response => response.text())
+.then(data => {
+
+let parser = new DOMParser();
+let xml = parser.parseFromString(data,"text/xml");
+
+let entries = xml.getElementsByTagName("entry");
+
+let html = "<ul>";
+
+for(let i=0;i<entries.length;i++){
+
+let title = entries[i].getElementsByTagName("title")[0].textContent;
+let link = entries[i].getElementsByTagName("id")[0].textContent;
+
+html += "<li><a href='"+link+"'>"+title+"</a></li>";
+
+}
+
+html += "</ul>";
+
+document.getElementById("arxiv-feed").innerHTML = html;
+
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+  
 <h2>Publications</h2>
 
 <ul>
