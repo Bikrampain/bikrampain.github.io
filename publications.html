@@ -21,21 +21,21 @@
 <ul>
 
 <li>
-<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.L140201">
+<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.L140201" target="_blank">
 Hilbert-space return probability and real-space autocorrelations
 </a>
 (PRB 108, 2023)
 </li>
 
 <li>
-<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.224201">
+<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.224201" target="_blank">
 Entanglement dynamics and eigenstate correlations
 </a>
 (PRB 110, 2024)
 </li>
 
 <li>
-<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.111.174206">
+<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.111.174206" target="_blank">
 Logarithmic entanglement lightcone
 </a>
 (PRB 111, 2025)
@@ -54,7 +54,10 @@ Loading papers...
 
 <script>
 
-fetch("http://arxiv.org/a/pain_b_1")
+const arxivURL =
+"https://export.arxiv.org/api/query?search_query=au:Pain%2C+B&start=0&max_results=5";
+
+fetch("https://api.allorigins.win/raw?url=" + encodeURIComponent(arxivURL))
 
 .then(response => response.text())
 
@@ -69,9 +72,11 @@ let html = "<ul>";
 
 for(let i=0;i<entries.length;i++){
 
-let title = entries[i].getElementsByTagName("title")[0].textContent.trim();
+let title =
+entries[i].getElementsByTagName("title")[0].textContent.trim();
 
-let link = entries[i].getElementsByTagName("id")[0].textContent;
+let link =
+entries[i].getElementsByTagName("id")[0].textContent;
 
 html += "<li><a href='"+link+"' target='_blank'>" + title + "</a></li>";
 
@@ -85,7 +90,8 @@ document.getElementById("arxiv-feed").innerHTML = html;
 
 .catch(error => {
 
-document.getElementById("arxiv-feed").innerHTML = "Unable to load arXiv papers.";
+document.getElementById("arxiv-feed").innerHTML =
+"Unable to load arXiv papers.";
 
 });
 
