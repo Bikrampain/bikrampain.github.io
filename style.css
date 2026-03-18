@@ -47,7 +47,10 @@ background:#095c5c;
 
 
 
-
+.button-group {
+    display: flex;
+    gap: 10px;
+}
 
 header img{
 width:140px;
