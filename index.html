@@ -1,55 +1,121 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Bikram Pain</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bikram Pain</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <nav>
-    <a href="index.html">Home</a>
+  <a class="nav-brand" href="index.html">Bikram Pain</a>
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
     <a href="research.html">Research</a>
     <a href="publications.html">Publications</a>
     <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
-<header>
-
-    <img src="profilepicwb.jpeg">
-
-    <div>
-
-        <h1>Bikram Pain</h1>
-
-        <p>
-            Graduate Student<br>
-            <a href="https://www.icts.res.in">
-                International Centre for Theoretical Sciences, Bengaluru, India
-            </a>
-        </p>
-
-        <div>
-            <a class="button" href="https://scholar.google.com/citations?user=yWUe2VUAAAAJ&hl=en" target="_blank">
-                Google Scholar
-            </a>
-      
-
-        <a class="button" href="http://arxiv.org/a/pain_b_1" target="_blank">
-            arXiv
+<main class="page">
+  <section class="hero">
+    <div class="hero-photo">
+      <img src="profilepicwb.jpeg" alt="Bikram Pain">
+    </div>
+    <div class="hero-text">
+      <h1>Bikram Pain</h1>
+      <p class="hero-affil">
+        Ph.D. Candidate &nbsp;·&nbsp;
+        <a href="https://www.icts.res.in" target="_blank">
+          International Centre for Theoretical Sciences
+        </a>, Bengaluru
+      </p>
+      <p class="hero-bio">
+        I am a Ph.D. student in my pre-final year at ICTS, working with
+        <a href="https://home.icts.res.in/~sthitadhi/" target="_blank" style="color:var(--teal);text-decoration:none;">Sthitadhi Roy</a>.
+        My research sits at the interface of non-equilibrium quantum dynamics,
+        quantum chaos, and ergodicity in many-body systems.
+      </p>
+      <div class="hero-links">
+        <a class="btn btn-primary" href="https://scholar.google.com/citations?user=yWUe2VUAAAAJ&hl=en" target="_blank">
+          Google Scholar
         </a>
-        <div>
-        <p>
+        <a class="btn btn-outline" href="http://arxiv.org/a/pain_b_1" target="_blank">
+          arXiv
+        </a>
+        <a class="btn btn-outline" href="https://drive.google.com/file/d/1TnZN9nhQQeBYiiFIgnc3pZ9tNaSdYTvN/view?usp=sharing" target="_blank">
+          CV
+        </a>
+      </div>
+    </div>
+  </section>
 
-        <div>
-I am a Ph.D. student in my pre-final year at ICTS, working with Sthitadhi Roy. My research focuses on non-equilibrium quantum dynamics, quantum chaos, and ergodicity in many-body systems.</p>
-</header>
+  <!-- Quick summary of research interests on home page -->
+  <section style="margin-top:64px;">
+    <p class="section-label">Research</p>
+    <h2 class="section-title">Interests</h2>
+    <div class="divider"></div>
+    <p style="font-family:var(--serif);font-size:1.05rem;color:var(--ink-2);max-width:600px;margin-bottom:28px;line-height:1.75;">
+      My work explores fundamental questions about how quantum many-body systems
+      explore their state space, thermalize, and fail to do so.
+    </p>
+    <div class="interest-grid">
+      <div class="interest-card">
+        <h3>Non-equilibrium Dynamics</h3>
+        <p>Entanglement growth, information spreading, and transport in driven and disordered quantum systems.</p>
+      </div>
+      <div class="interest-card">
+        <h3>Quantum Chaos &amp; Ergodicity</h3>
+        <p>Spectral statistics, Krylov complexity, and the eigenstate thermalization hypothesis.</p>
+      </div>
+      <div class="interest-card">
+        <h3>Many-body Localisation</h3>
+        <p>Eigenstate correlations, entanglement structure, and dynamical signatures in the MBL phase.</p>
+      </div>
+      <div class="interest-card">
+        <h3>Random Matrix Theory</h3>
+        <p>Level statistics, correlation functions, and connections to quantum chaotic dynamics.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- Recent publications teaser -->
+  <section style="margin-top:64px;">
+    <p class="section-label">Recent work</p>
+    <h2 class="section-title">Selected Publications</h2>
+    <div class="divider"></div>
+    <div class="pub-list">
 
+      <div class="pub-item">
+        <span class="pub-num">1</span>
+        <div class="pub-body">
+          <p class="pub-title">Robust Correlation-Induced Localization Under Time-Reversal Symmetry Breaking</p>
+          <p class="pub-authors"><em>Bikram Pain</em>, Sthitadhi Roy, Jens H. Bardarson, Ivan M. Khaymovich</p>
+          <div class="pub-links">
+            <a class="pub-link" href="https://arxiv.org/abs/2604.02321" target="_blank">arXiv:2604.02321</a>
+            <span class="pub-tag">Preprint</span>
+          </div>
+        </div>
+      </div>
 
+      <div class="pub-item">
+        <span class="pub-num">2</span>
+        <div class="pub-body">
+          <p class="pub-title">Entanglement dynamics and eigenstate correlations in strongly disordered quantum many-body systems</p>
+          <p class="pub-authors"><em>Bikram Pain</em>, Sthitadhi Roy</p>
+          <div class="pub-links">
+            <a class="pub-link" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.224201" target="_blank">Phys. Rev. B 110, 224201</a>
+          </div>
+        </div>
+      </div>
 
+    </div>
+    <div style="margin-top:20px;">
+      <a class="btn btn-outline" href="publications.html">All publications →</a>
+    </div>
+  </section>
+</main>
 
 </body>
-
 </html>

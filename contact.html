@@ -1,45 +1,61 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-<title>Contact</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact · Bikram Pain</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="research.html">Research</a>
-<a href="publications.html">Publications</a>
-<a href="contact.html">Contact</a>
+  <a class="nav-brand" href="index.html">Bikram Pain</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
 </nav>
 
-<h2>Contact</h2>
+<main class="page">
+  <p class="section-label">Get in touch</p>
+  <h1 class="section-title">Contact</h1>
+  <div class="divider"></div>
 
-<p>
-Email:
-<a href="mailto:bikram.pain@icts.res.in">
-bikram.pain@icts.res.in
-</a>
-</p>
+  <p style="font-family:var(--serif);font-size:1.05rem;color:var(--ink-2);max-width:500px;margin-bottom:36px;line-height:1.75;">
+    I'm happy to discuss research, collaborations, or anything related to
+    quantum dynamics and condensed matter theory.
+  </p>
 
-<p>
-Alternate:
-<a href="mailto:biku.pain@gmail.com">
-biku.pain@gmail.com
-</a>
-</p>
+  <div class="contact-grid">
 
-<p>
-Location: Bangalore, India
-</p>
+    <div class="contact-card">
+      <p class="contact-card-label">Institutional email</p>
+      <a href="mailto:bikram.pain@icts.res.in">bikram.pain@icts.res.in</a>
+    </div>
 
-<p>
-<a href="https://drive.google.com/file/d/1TnZN9nhQQeBYiiFIgnc3pZ9tNaSdYTvN/view?usp=sharing"> CV</a>
-</p>
+    <div class="contact-card">
+      <p class="contact-card-label">Alternate email</p>
+      <a href="mailto:biku.pain@gmail.com">biku.pain@gmail.com</a>
+    </div>
 
+    <div class="contact-card">
+      <p class="contact-card-label">Location</p>
+      <p>International Centre for Theoretical Sciences<br>Bengaluru, India</p>
+    </div>
 
+    <div class="contact-card">
+      <p class="contact-card-label">CV &amp; profiles</p>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px;">
+        <a href="https://drive.google.com/file/d/1TnZN9nhQQeBYiiFIgnc3pZ9tNaSdYTvN/view?usp=sharing" target="_blank">Curriculum Vitae (PDF)</a>
+        <a href="https://scholar.google.com/citations?user=yWUe2VUAAAAJ&hl=en" target="_blank">Google Scholar</a>
+        <a href="http://arxiv.org/a/pain_b_1" target="_blank">arXiv author page</a>
+      </div>
+    </div>
+
+  </div>
+</main>
 
 </body>
 </html>
